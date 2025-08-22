@@ -1,0 +1,27 @@
+{"ts":1755822842.472,"kind":"session_start","payload":{"mode":"vanilla","patched":true}}
+{"ts":1755822842.473,"kind":"asr_final","payload":{"turn":1,"text":"Hi, I need auto insurance."}}
+{"ts":1755822842.474,"kind":"tts_start","payload":{"turn":1}}
+{"ts":1755822842.475,"kind":"llm_response","payload":{"turn":1,"text":"ACK: Hi, I need auto insurance.","latency":0.001}}
+{"ts":1755822842.475,"kind":"slot_update","payload":{"turn":1,"captured":{"vehicle":{},"product":"auto"}}}
+{"ts":1755822842.476,"kind":"asr_final","payload":{"turn":2,"text":"47906."}}
+{"ts":1755822842.476,"kind":"tts_start","payload":{"turn":2}}
+{"ts":1755822842.476,"kind":"llm_response","payload":{"turn":2,"text":"ACK: 47906.","latency":0}}
+{"ts":1755822842.477,"kind":"slot_update","payload":{"turn":2,"captured":{"vehicle":{},"product":"auto","zip":"47906"}}}
+{"ts":1755822842.478,"kind":"asr_final","payload":{"turn":3,"text":"2019 Toyota Camry."}}
+{"ts":1755822842.478,"kind":"tts_start","payload":{"turn":3}}
+{"ts":1755822842.479,"kind":"llm_response","payload":{"turn":3,"text":"ACK: 2019 Toyota Camry.","latency":0.001}}
+{"ts":1755822842.479,"kind":"slot_update","payload":{"turn":3,"captured":{"vehicle":{"year":"2019","make":"Toyota","model":"Camry"},"product":"auto","zip":"47906"}}}
+{"ts":1755822842.48,"kind":"asr_final","payload":{"turn":4,"text":"Yes."}}
+{"ts":1755822842.48,"kind":"tts_start","payload":{"turn":4}}
+{"ts":1755822842.481,"kind":"llm_response","payload":{"turn":4,"text":"ACK: Yes.","latency":0.001}}
+{"ts":1755822842.481,"kind":"slot_update","payload":{"turn":4,"captured":{"vehicle":{"year":"2019","make":"Toyota","model":"Camry"},"product":"auto","zip":"47906","current_insurer":"yes"}}}
+{"ts":1755822842.481,"kind":"asr_final","payload":{"turn":5,"text":"One."}}
+{"ts":1755822842.482,"kind":"tts_start","payload":{"turn":5}}
+{"ts":1755822842.482,"kind":"llm_response","payload":{"turn":5,"text":"ACK: One.","latency":0}}
+{"ts":1755822842.482,"kind":"slot_update","payload":{"turn":5,"captured":{"vehicle":{"year":"2019","make":"Toyota","model":"Camry"},"product":"auto","zip":"47906","current_insurer":"yes","accidents_3yr":1}}}
+{"ts":1755822842.483,"kind":"asr_final","payload":{"turn":6,"text":"shlok@example.com"}}
+{"ts":1755822842.483,"kind":"tts_start","payload":{"turn":6}}
+{"ts":1755822842.483,"kind":"llm_response","payload":{"turn":6,"text":"ACK: shlok@example.com","latency":0}}
+{"ts":1755822842.484,"kind":"slot_update","payload":{"turn":6,"captured":{"vehicle":{"year":"2019","make":"Toyota","model":"Camry"},"product":"auto","zip":"47906","current_insurer":"yes","accidents_3yr":1,"email":"shlok@example.com"}}}
+{"ts":1755822842.484,"kind":"handoff","payload":{"success":true,"patched":true,"captured":{"product":"auto","zip":"47906","vehicle":{"year":"2019","make":"Toyota","model":"Camry"},"current_insurer":"yes","accidents_3yr":1,"email":"shlok@example.com"}}}
+{"ts":1755822842.485,"kind":"session_end","payload":{}}

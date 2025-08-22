@@ -1,0 +1,23 @@
+{"ts":1755822908.209,"kind":"session_start","payload":{"mode":"baml","spec":"agent/prompts/baml_spec.yaml","patched":true}}
+{"ts":1755822908.209,"kind":"asr_final","payload":{"turn":1,"text":"Home insurance."}}
+{"ts":1755822908.21,"kind":"tts_start","payload":{"turn":1}}
+{"ts":1755822908.21,"kind":"llm_response","payload":{"turn":1,"text":"ACK: Home insurance.","state":"next","latency":0}}
+{"ts":1755822908.21,"kind":"slot_update","payload":{"turn":1,"captured":{"product":"home"}}}
+{"ts":1755822908.21,"kind":"asr_final","payload":{"turn":2,"text":"60606."}}
+{"ts":1755822908.211,"kind":"tts_start","payload":{"turn":2}}
+{"ts":1755822908.211,"kind":"llm_response","payload":{"turn":2,"text":"ACK: 60606.","state":"next","latency":0}}
+{"ts":1755822908.211,"kind":"slot_update","payload":{"turn":2,"captured":{"product":"home","zip":"60606"}}}
+{"ts":1755822908.212,"kind":"asr_final","payload":{"turn":3,"text":"No."}}
+{"ts":1755822908.212,"kind":"tts_start","payload":{"turn":3}}
+{"ts":1755822908.212,"kind":"llm_response","payload":{"turn":3,"text":"ACK: No.","state":"next","latency":0}}
+{"ts":1755822908.212,"kind":"slot_update","payload":{"turn":3,"captured":{"product":"home","zip":"60606","current_insurer":"no"}}}
+{"ts":1755822908.213,"kind":"asr_final","payload":{"turn":4,"text":"Zero."}}
+{"ts":1755822908.214,"kind":"tts_start","payload":{"turn":4}}
+{"ts":1755822908.214,"kind":"llm_response","payload":{"turn":4,"text":"ACK: Zero.","state":"next","latency":0}}
+{"ts":1755822908.214,"kind":"slot_update","payload":{"turn":4,"captured":{"product":"home","zip":"60606","current_insurer":"no","accidents_3yr":0}}}
+{"ts":1755822908.214,"kind":"asr_final","payload":{"turn":5,"text":"shlok@example.com"}}
+{"ts":1755822908.215,"kind":"tts_start","payload":{"turn":5}}
+{"ts":1755822908.215,"kind":"llm_response","payload":{"turn":5,"text":"ACK: shlok@example.com","state":"next","latency":0}}
+{"ts":1755822908.215,"kind":"slot_update","payload":{"turn":5,"captured":{"product":"home","zip":"60606","current_insurer":"no","accidents_3yr":0,"email":"shlok@example.com"}}}
+{"ts":1755822908.215,"kind":"handoff","payload":{"success":true,"patched":true,"captured":{"product":"home","zip":"60606","current_insurer":"no","accidents_3yr":0,"email":"shlok@example.com"}}}
+{"ts":1755822908.215,"kind":"session_end","payload":{}}
