@@ -1,0 +1,52 @@
+schema:
+  slots:
+    product: {type: enum, values: [auto, home]}
+    zip: {type: pattern, regex: "^[0-9]{5}$"}
+    vehicle.year: {type: pattern, regex: "^(19|20)\\d{2}$"}
+    vehicle.make: {type: string}
+    vehicle.model: {type: string}
+    current_insurer: {type: enum, values: [yes, no]}
+    accidents_3yr: {type: int, min: 0, max: 10}
+    email: {type: email}
+
+states:
+  - id: collect_product
+    prompt: "Are you looking for auto or home insurance?"
+    extract: [product]
+    next: collect_zip
+
+  - id: collect_zip
+    prompt: "What is your 5-digit ZIP code?"
+    extract: [zip]
+    validate: {zip: "ZIP must be 5 digits."}
+    next: route_vehicle_or_insurer
+
+  - id: route_vehicle_or_insurer
+    branch:
+      when: "product == 'auto'"
+      true_next: collect_vehicle
+      false_next: collect_current_insurer
+
+  - id: collect_vehicle
+    prompt: "What are the year, make, and model of your vehicle?"
+    extract: [vehicle.year, vehicle.make, vehicle.model]
+    next: collect_current_insurer
+
+  - id: collect_current_insurer
+    prompt: "Are you currently insured? yes or no."
+    extract: [current_insurer]
+    next: collect_accidents
+
+  - id: collect_accidents
+    prompt: "How many at-fault accidents in the last three years?"
+    extract: [accidents_3yr]
+    next: collect_email
+
+  - id: collect_email
+    prompt: "What email should we send the quote to?"
+    extract: [email]
+    next: handoff
+
+  - id: handoff
+    action: "handoff_success"
+    prompt: "Thanks! I have your details and will hand this to an agent now. Handoff complete."
