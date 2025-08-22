@@ -1,12 +1,12 @@
-\# Pipecat — BAML vs. Vanilla Prompting (Voice Agent)
+﻿\# Pipecat â€” BAML vs. Vanilla Prompting (Voice Agent)
 
 
 
 This repo compares the same voice intake flow implemented two ways:
 
-\- \*\*Vanilla\*\* — free-form system prompt  
+\- \*\*Vanilla\*\* â€” free-form system prompt  
 
-\- \*\*BAML\*\* — structured spec (slots \& states)
+\- \*\*BAML\*\* â€” structured spec (slots \& states)
 
 
 
@@ -20,19 +20,18 @@ Both modes write JSONL logs to `./logs`, and `eval/metrics.ts` computes side-by-
 
 
 
-\## Quick Start (Windows PowerShell)
+\
 
 
 
-> Requires Node.js 18+ and `npm`.
 
+## 📊 Latest Metrics
 
+```
 
-```powershell
+> pipecat-baml-vs-vanilla@1.0.0 metrics
+> npx ts-node --transpile-only eval/metrics.ts
 
-\# Install deps
-
-npm ci
-
-
-
+vanilla: calls=1, handoff_success=1/1, median=0.000s, p90=0.001s, mean=0.000s, avg_turns=6.000, slot_coverage=100.0%
+baml: calls=1, handoff_success=1/1, median=0.000s, p90=0.001s, mean=0.000s, avg_turns=5.000, slot_coverage=100.0%
+```
