@@ -1,27 +1,28 @@
 {
-  "name": "pipecat-baml-vs-vanilla",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "clean": "powershell -NoProfile -Command \"Remove-Item -Recurse -Force .\\logs -ErrorAction Ignore; New-Item -ItemType Directory logs | Out-Null\"",
-    "gen:vanilla": "npx ts-node agent/main_vanilla.ts",
-    "gen:baml": "npx ts-node agent/main_baml.ts",
-    "metrics": "npx ts-node --transpile-only eval/metrics.ts",
-    "demo": "npm run clean && npm run gen:vanilla && npm run gen:baml && npm run metrics",
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@pipecat-ai/client-js": "^1.2.0",
-    "@pipecat-ai/daily-transport": "^1.2.0",
-    "dotenv": "^17.2.1"
-  },
-  "devDependencies": {
-    "@types/node": "^24.3.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
-  }
+    "name":  "pipecat-baml-vs-vanilla",
+    "version":  "1.0.0",
+    "description":  "",
+    "main":  "index.js",
+    "scripts":  {
+                    "demo":  "npm run clean \u0026\u0026 npm run gen:vanilla \u0026\u0026 npm run gen:baml \u0026\u0026 npm run metrics",
+                    "clean":  "powershell -NoProfile -Command \"Remove-Item -Recurse -Force .\\logs -ErrorAction Ignore; New-Item -ItemType Directory logs | Out-Null\"",
+                    "metrics":  "npx ts-node --transpile-only eval/metrics.ts",
+                    "gen:baml":  "npx ts-node agent/main_baml.ts",
+                    "gen:vanilla":  "npx ts-node agent/main_vanilla.ts"
+                },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "dependencies":  {
+                         "@pipecat-ai/client-js":  "^1.2.0",
+                         "@pipecat-ai/daily-transport":  "^1.2.0",
+                         "dotenv":  "^17.2.1"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "^24.3.0",
+                            "ts-node":  "^10.9.2",
+                            "typescript":  "^5.9.2"
+                        }
 }
