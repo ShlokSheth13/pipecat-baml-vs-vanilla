@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "powershell -NoProfile -Command \"Remove-Item -Recurse -Force .\\logs -ErrorAction Ignore; New-Item -ItemType Directory logs | Out-Null\"",
+    "gen:vanilla": "npx ts-node agent/main_vanilla.ts",
+    "gen:baml": "npx ts-node agent/main_baml.ts",
+    "metrics": "npx ts-node --transpile-only eval/metrics.ts",
+    "demo": "npm run clean && npm run gen:vanilla && npm run gen:baml && npm run metrics",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
   "keywords": [],
   "author": "",
