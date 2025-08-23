@@ -1,0 +1,30 @@
+﻿# BAML-ish spec for the same flow
+slots:
+  product:
+    type: enum
+    values: [auto, home]
+  zip:
+    type: string
+    pattern: '^\d{5}$'
+  vehicle:
+    type: object
+    when: product == "auto"
+    properties:
+      year:  { type: integer }
+      make:  { type: string }
+      model: { type: string }
+  current_insurer: { type: boolean }
+  accidents_3yr:   { type: integer }
+  email:
+    type: string
+    format: email
+
+transitions:
+  - when: all_slots_captured
+    then:
+      - action: read_back_json
+      - say: "handoff complete"
+
+policies:
+  - validate_slot_formats
+  - confirm_all_slots_before_handoff

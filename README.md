@@ -44,3 +44,20 @@ baml: calls=1, handoff_success=1/1, median=0.000s, p90=0.001s, mean=0.000s, avg_
 - **Why**: BAML’s schema + transitions reduce back-and-forth and make error recovery explicit.
 
 **Call**: **BAML** is the better choice for this intake task given equal success/coverage and fewer turns.
+
+## Quick Start (Windows PowerShell)
+
+**Prereqs**
+- Node.js 18+
+- npm
+- copy `.env.example` to `.env` and fill your keys
+
+```powershell
+npm ci
+
+# generate sample call logs
+npm run gen:vanilla
+npm run gen:baml
+
+# compute metrics
+npm run metrics
