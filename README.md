@@ -1,12 +1,12 @@
-﻿\# Pipecat â€” BAML vs. Vanilla Prompting (Voice Agent)
+﻿\# Pipecat — BAML vs. Vanilla Prompting (Voice Agent)
 
 
 
 This repo compares the same voice intake flow implemented two ways:
 
-\- \*\*Vanilla\*\* â€” free-form system prompt  
+\- \*\*Vanilla\*\* — free-form system prompt  
 
-\- \*\*BAML\*\* â€” structured spec (slots \& states)
+\- \*\*BAML\*\* — structured spec (slots \& states)
 
 
 
@@ -17,14 +17,6 @@ Both modes write JSONL logs to `./logs`, and `eval/metrics.ts` computes side-by-
 
 
 ---
-
-
-
-\
-
-
-
-
 ## 📊 Latest Metrics
 
 ```
@@ -61,3 +53,4 @@ npm run gen:baml
 
 # compute metrics
 npm run metrics
+
