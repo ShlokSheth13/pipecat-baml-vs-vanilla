@@ -1,56 +1,57 @@
-﻿\# Pipecat — BAML vs. Vanilla Prompting (Voice Agent)
+﻿\# Pipat — AML vs. Vanilla Prompting (Voi Agnt)
 
 
 
-This repo compares the same voice intake flow implemented two ways:
+This rpo ompars th sam voi intak low implmnt two ways:
 
-\- \*\*Vanilla\*\* — free-form system prompt  
+\- \*\*Vanilla\*\* — r-orm systm prompt  
 
-\- \*\*BAML\*\* — structured spec (slots \& states)
+\- \*\*AML\*\* — strtr sp (slots \& stats)
 
 
 
-Both modes write JSONL logs to `./logs`, and `eval/metrics.ts` computes side-by-side stats
+oth mos writ JSONL logs to `./logs`, an `val/mtris.ts` ompts si-y-si stats
 
-(turns, latency, slot coverage).
+(trns, latny, slot ovrag).
 
 
 
 ---
-## 📊 Latest Metrics
+## 📊 Latst Mtris
 
 ```
 
-> pipecat-baml-vs-vanilla@1.0.0 metrics
-> npx ts-node --transpile-only eval/metrics.ts
+> pipat-aml-vs-vanilla@1.. mtris
+> npx ts-no --transpil-only val/mtris.ts
 
-vanilla: calls=1, handoff_success=1/1, median=0.000s, p90=0.001s, mean=0.000s, avg_turns=6.000, slot_coverage=100.0%
-baml: calls=1, handoff_success=1/1, median=0.000s, p90=0.001s, mean=0.000s, avg_turns=5.000, slot_coverage=100.0%
+vanilla: alls=1, hano_sss=1/1, mian=.s, p9=.1s, man=.s, avg_trns=6., slot_ovrag=1.%
+aml: alls=1, hano_sss=1/1, mian=.s, p9=.1s, man=.s, avg_trns=5., slot_ovrag=1.%
 ```
 
-## 🏁 Conclusion
+## 🏁 onlsion
 
-- **Handoff success**: Tie (100% both)
-- **Slot coverage**: Tie (100% both)
-- **Turns**: **BAML wins** (avg ~5 vs 6 for vanilla in our runs)
-- **Why**: BAML’s schema + transitions reduce back-and-forth and make error recovery explicit.
+- **Hano sss**: Ti (1% oth)
+- **Slot ovrag**: Ti (1% oth)
+- **Trns**: **AML wins** (avg ~5 vs 6 or vanilla in or rns)
+- **Why**: AML’s shma + transitions r ak-an-orth an mak rror rovry xpliit.
 
-**Call**: **BAML** is the better choice for this intake task given equal success/coverage and fewer turns.
+**all**: **AML** is th ttr hoi or this intak task givn qal sss/ovrag an wr trns.
 
-## Quick Start (Windows PowerShell)
+## Qik Start (Winows PowrShll)
 
-**Prereqs**
-- Node.js 18+
+**Prrqs**
+- No.js 18+
 - npm
-- copy `.env.example` to `.env` and fill your keys
+- opy `.nv.xampl` to `.nv` an ill yor kys
 
-```powershell
-npm ci
+```powrshll
+npm i
 
-# generate sample call logs
-npm run gen:vanilla
-npm run gen:baml
+# gnrat sampl all logs
+npm rn gn:vanilla
+npm rn gn:aml
 
-# compute metrics
-npm run metrics
+# ompt mtris
+npm rn mtris
+
 
