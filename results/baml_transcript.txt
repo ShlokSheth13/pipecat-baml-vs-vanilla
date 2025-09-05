@@ -1,0 +1,12 @@
+USER: hey, my AC isn't working
+ASSISTANT: I'd be happy to help you troubleshoot the issue with your AC. 
+
+To get started, I need to know a bit more about the problem. Can you please tell me your name?
+STATE: {'name': None, 'issue': "hey, my AC isn't working", 'callback_time': None, 'done': False}
+
+USER: my name is John
+ASSISTANT: I have updated the current state with your name. Here's the current state:
+{'name': 'John', 'issue': "hey, my AC isn't working", 'callback_time': None, 'done': False}
+
+Next, I need to know the callback time.
+STATE: {'name': 'John', 'issue': "hey, my AC isn't working", 'callback_time': 'my name is John', 'done': True}

@@ -1,0 +1,8 @@
+USER: hey, my AC isn't working
+ASSISTANT: I'm here to help. Can you please tell me your name and a good time for me to call you back to discuss your AC issue?
+
+USER: my name is John
+ASSISTANT: John, I've got your name. Now, what's a good time for me to call you back to discuss your AC issue?
+
+USER: tomorrow afternoon works
+ASSISTANT: John, I've got your name and preferred callback time. I'll make sure to reach out to you tomorrow afternoon to help you with your AC issue. Is that confirmed?

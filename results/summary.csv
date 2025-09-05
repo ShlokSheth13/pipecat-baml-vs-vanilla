@@ -1,0 +1,3 @@
+variant,turns,mean_latency,p95_latency,session
+vanilla,3,0.514,0.752,1884da4c-2264-4a26-be01-0507594bfdd8
+baml,2,0.478,0.563,c6a2e500-668c-433e-bb1d-8fdd485e4f96
